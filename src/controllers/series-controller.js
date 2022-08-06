@@ -9,7 +9,7 @@ export const series = (app, bdS)=>{
     app.get("/series", (req, res) => {
         SeriesDAO.listarSeries()
         .then((result) => {
-          res.status(200).json({result })
+          res.status(200).json(result)
         })
         .catch((err) => {res.send(err)})
       });
